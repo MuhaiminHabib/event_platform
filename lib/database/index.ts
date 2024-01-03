@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { Monda } from "next/font/google";
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
@@ -13,7 +12,7 @@ export const connectToDatabase = async () => {
   cached.promise =
     cached.promise ||
     mongoose.connect(MONGODB_URI, {
-      dbName: "eventlycluster",
+      dbName: "evently",
       bufferCommands: false,
     });
 
